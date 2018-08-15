@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js制作网易邮箱6.0介绍页面演示_dowebok</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	if($.browser.msie && $.browser.version < 10){
+		$('body').addClass('ltie10');
+	}
+	$.fn.fullpage({
+		verticalCentered: false,
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+		navigation: true,
+		navigationTooltips: ['首页', '视觉', '交互', '皮肤', '功能', '待办邮件', '联系人邮件', '科技', '连接易信', '马上体验']
+	});
+});
+</script>
+</head>
+<body>
+<div class="section section1">
+	<div class="bg"><img src="img/h1-1.jpg" alt=""></div>
+	<div class="bg11"></div>
+</div>
+
+<div class="section section2">
+	<div class="bg"><img src="img/h2-1.jpg" alt=""></div>
+	<div class="bg21"></div>
+	<div class="bg22"></div>
+</div>
+
+<div class="section section3">
+	<div class="bg"><img src="img/h3.jpg" alt=""></div>
+	<div class="bg31"></div>
+</div>
+
+<div class="section section4">
+	<div class="bg"><img src="img/h4.jpg" alt=""></div>
+	<div class="bg41"></div>
+</div>
+
+<div class="section section5">
+	<div class="bg"><img src="img/h5.jpg" alt=""></div>
+	<div class="bg51"></div>
+</div>
+
+<div class="section section6">
+	<div class="bg"><img src="img/h6.jpg" alt=""></div>
+	<div class="bg61"></div>
+</div>
+
+<div class="section section7">
+	<div class="bg"><img src="img/h7.jpg" alt=""></div>
+	<div class="bg71"></div>
+</div>
+
+<div class="section section8">
+	<div class="bg"><img src="img/h8.jpg" alt=""></div>
+	<div class="bg81"></div>
+	<div class="bg82">
+        <p id="timeee" style="font-size: 70px;color:white;margin-left: 10%;width: 850px;">234天08小时06分12秒</p>
+    </div>
+</div>
+
+</body>
+    <script type="text/javascript">
+
+
+    var together = new Date();
+    together.setFullYear(2017, 11, 26);
+    together.setHours(0);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+
+
+    function timeElapse(date){
+        var current = Date();
+        var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+        var days = Math.floor(seconds / (3600 * 24));
+        seconds = seconds % (3600 * 24);
+        var hours = Math.floor(seconds / 3600);
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+        seconds = seconds % 3600;
+        var minutes = Math.floor(seconds / 60);
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        seconds = seconds % 60;
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        var result = days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
+        $("#timeee").html(result);
+    }
+</script>
+</html>
