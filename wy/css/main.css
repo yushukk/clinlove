@@ -60,7 +60,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg52 { margin-left: -403px; background: url(images/bg52.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 .bg53 { margin-left: 195px; background: url(images/bg53.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 .bg54 { margin-left: 645px; background: url(images/bg54.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
-dot
+
 .bg61 { position: absolute; top:100%; width: 100%; height: 100%;  background: url(../img/h6_02.png) 0 0 no-repeat;background-size: 100%; transition: all 1s; opacity: 0;}
 .bg62 { position: absolute; left: 10%; bottom: 20%; width: 597px; height: 284px; margin-left: -507px; background-image: url(images/bg62.png); transition: all 1s;}
 .txt6 { position: absolute; left: 90%; bottom: 20%; width: 447px; margin-left: 90px; opacity: 0; transition: all 1s;}
